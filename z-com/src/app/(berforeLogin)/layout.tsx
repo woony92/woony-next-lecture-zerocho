@@ -1,12 +1,16 @@
-export default function BeforeLoginLayout({
-  children,
-}: Readonly<{
+import style from "@/app/page.module.css";
+
+type Props = {
   children: React.ReactNode;
-}>) {
+  modal: React.ReactNode;
+};
+
+export default function BeforeLoginLayout({ children, modal }: Props) {
   return (
-    <main>
+    <div className={style.container}>
       Before Login Layout
       {children}
-    </main>
+      {modal}
+    </div>
   );
 }
