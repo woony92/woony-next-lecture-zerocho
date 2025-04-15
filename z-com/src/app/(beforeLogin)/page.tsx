@@ -1,7 +1,7 @@
-import style from "@/app/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import zlogo from "../../../public/zlogo.png";
+import style from "./page.module.css";
 
 export default function App() {
   return (
