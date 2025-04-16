@@ -13,6 +13,7 @@
 
 .modal {
   position: relative;
+  background-color: #ffffff;
   top: 5%;
   max-width: 80vw;
   min-width: 600px;
