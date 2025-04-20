@@ -1,5 +1,7 @@
+import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
 import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
 import NavMenu from "@/app/(afterLogin)/_component/NavMenu";
+import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -46,6 +48,11 @@ export default function AfterLoginLayout({
                 </svg>
                 <input type="search" />
               </form>
+            </div>
+            <TrendSection />
+            <div className={style.followRecommend}>
+              <h3>팔로우 추천</h3>
+              <FollowRecommend />
             </div>
           </section>
         </div>
