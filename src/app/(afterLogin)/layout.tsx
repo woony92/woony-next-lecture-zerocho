@@ -1,3 +1,7 @@
+import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
+import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
+import NavMenu from "@/app/(afterLogin)/_component/NavMenu";
+import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -20,11 +24,14 @@ export default function AfterLoginLayout({
               </div>
             </Link>
             <nav>
-              <ul></ul>
-              <Link href="/compose/tweet" className={style.postButton}>
+              <ul>
+                <NavMenu />
+              </ul>
+              <Link href=" /compose/tweet" className={style.postButton}>
                 게시하기
               </Link>
             </nav>
+            <LogoutButton />
           </div>
         </section>
       </header>
@@ -42,8 +49,10 @@ export default function AfterLoginLayout({
                 <input type="search" />
               </form>
             </div>
+            <TrendSection />
             <div className={style.followRecommend}>
               <h3>팔로우 추천</h3>
+              <FollowRecommend />
             </div>
           </section>
         </div>
