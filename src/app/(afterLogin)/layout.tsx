@@ -8,11 +8,12 @@ import { ReactNode } from "react";
 import ZLogo from "../../../public/zlogo.png";
 import style from "./layout.module.css";
 
-export default function AfterLoginLayout({
-  children,
-}: {
+type Props = {
   children: ReactNode;
-}) {
+  modal?: ReactNode;
+};
+
+export default function AfterLoginLayout({ children, modal }: Props) {
   return (
     <div className={style.container}>
       <header className={style.leftSectionWrapper}>
@@ -57,6 +58,7 @@ export default function AfterLoginLayout({
           </section>
         </div>
       </div>
+      {modal}
     </div>
   );
 }
