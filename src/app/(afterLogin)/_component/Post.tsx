@@ -1,3 +1,4 @@
+import ActionButtons from "@/app/(afterLogin)/_component/ActionButton";
 import dayjs from "dayjs";
 import "dayjs/locale/ko";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -41,7 +42,7 @@ export default function Post() {
           </div>
           <div>{target.content}</div>
           <div className={style.postImageSection}></div>
-          {/* <ActionButtons /> */}
+          <ActionButtons />
         </div>
       </div>
     </article>
