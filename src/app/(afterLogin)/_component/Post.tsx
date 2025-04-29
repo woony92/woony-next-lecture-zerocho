@@ -26,13 +26,17 @@ export default function Post({ noImage }: Props) {
     createdAt: new Date(),
     Images: [] as any[],
   };
+  if (Math.random() > 0 && !noImage) {
+    target.Images.push({ imageId: 1, link: faker.image.urlLoremFlickr() });
+  }
+  if (Math.random() > 0.25 && !noImage) {
+    target.Images.push({ imageId: 2, link: faker.image.urlLoremFlickr() });
+  }
   if (Math.random() > 0.5 && !noImage) {
-    target.Images.push(
-      { imageId: 1, link: faker.image.urlLoremFlickr() },
-      { imageId: 2, link: faker.image.urlLoremFlickr() },
-      { imageId: 3, link: faker.image.urlLoremFlickr() },
-      { imageId: 4, link: faker.image.urlLoremFlickr() }
-    );
+    target.Images.push({ imageId: 3, link: faker.image.urlLoremFlickr() });
+  }
+  if (Math.random() > 0.75 && !noImage) {
+    target.Images.push({ imageId: 4, link: faker.image.urlLoremFlickr() });
   }
 
   return (
